@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D PlayerRigid;
     public float acceleration = 5F;
     public float maxSpeed;
-    public float currentAutoClickForce; //Needs to be added Click.perSecondValue;
+    public float currentAutoClickForce;
     private Vector3 direction;
     public Animator Frog; 
     public Animator Human;
@@ -40,7 +40,8 @@ public class Player : MonoBehaviour
 
     void AddAutoForce()
     {
-        AddMonsterForce(currentAutoClickForce);
+        AddMonsterForce(currentAutoClickForce * Click.perSecondValue);
+        
         //(float)currentAutoClickForce / 100)
     }
 
