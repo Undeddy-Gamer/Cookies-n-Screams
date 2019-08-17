@@ -32,8 +32,7 @@ public class ParallaxBackground : MonoBehaviour
         leftIndex = 0;
         //set right index to the amount of layers for the background (minus one due to index starting at 0)
         rightIndex = layers.Length - 1;
-
-
+        
     }
 
     private void Update()
@@ -53,19 +52,19 @@ public class ParallaxBackground : MonoBehaviour
 
         if (cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
         {
-            ScrollLeft();
+            goLeft();
         }
 
         if (cameraTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
         {
-            ScrollRight();
+            goRight();
         }
 
         //transform.position = new Vector3(transform.position.x, transform.position.y, layerNo);
     }
 
 
-    private void ScrollLeft()
+    private void goLeft()
     {
 
         int lastRight = rightIndex;
@@ -76,7 +75,7 @@ public class ParallaxBackground : MonoBehaviour
             rightIndex = layers.Length - 1;
     }
 
-    private void ScrollRight()
+    private void goRight()
     {
         int lastLeft = leftIndex;
         layers[leftIndex].position = Vector3.right * (layers[rightIndex].position.x + backgroundSize);
