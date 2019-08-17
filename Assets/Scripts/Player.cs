@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("AddAutoForce", 1, 1f);
+        InvokeRepeating("AddAutoForce", 1, 0.1f);
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     void AddAutoForce()
     {
-        AddMonsterForce(currentAutoClickForce * Click.perSecondValue);
+        AddMonsterForce((currentAutoClickForce * 0.2f) * Click.perSecondValue);
         
         //(float)currentAutoClickForce / 100)
     }
