@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuAnimation : MonoBehaviour    
 {
     public Rigidbody2D MenuRigid;
-    public float acceleration = 50f;
+    public float acceleration = 40f;
     private Vector3 direction;
 
     private void Start()

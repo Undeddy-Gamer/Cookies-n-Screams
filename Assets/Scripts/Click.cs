@@ -11,7 +11,6 @@ public class Click : MonoBehaviour
     private void Start()
     {
         clickValue = 1;
-        
     }
     public void ClickerButton()
     {

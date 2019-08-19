@@ -16,7 +16,7 @@ public class ParallaxBackground : MonoBehaviour
     private int leftIndex;
     private int rightIndex;
     private float lastCameraX;
-    
+
 
     private void Start()
     {
