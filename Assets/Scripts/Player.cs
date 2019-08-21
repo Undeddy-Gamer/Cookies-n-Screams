@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Frog.speed = (PlayerRigid.velocity.x / maxSpeed) *11;
-        Human.speed = (PlayerRigid.velocity.x / maxSpeed) *11;
+        Frog.speed = (PlayerRigid.velocity.x / maxSpeed) *12;
+        Human.speed = (PlayerRigid.velocity.x / maxSpeed) *12;
         //Debug.Log(PlayerRigid.velocity.x);
         if (PlayerRigid.velocity.magnitude < 0.5f && !Test)
         {
