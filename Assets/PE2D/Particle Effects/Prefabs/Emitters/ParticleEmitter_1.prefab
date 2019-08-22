@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e84997cc4ec423e811380546685ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenProjectileRelease: 1
+  timeBetweenProjectileRelease: 0
   initialScale: {x: 2, y: 1}
   particlesEnabled: 1
   duration: 90
