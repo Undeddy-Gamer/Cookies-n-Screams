@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
     //<access-specifier> <data-type> <variable name>
     public Rigidbody2D PlayerRigid; // Rigidboy for the Player and monster
     public float acceleration = 5F; //
@@ -14,8 +13,7 @@ public class Player : MonoBehaviour
     private Vector2 direction; //Vector2 for the rigidbody movement
     public Animator Frog; //The animator for the monster
     public Animator Human; //The animator for the human
-    public static float currentSpeed; 
-    bool testMovement;
+    bool testMovement; //A bool used to freeze the rigidbody when needed
     public Slider screamSlider; //Slider refrence for the screams perSecondBar
 
     private void Start()
@@ -27,8 +25,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Frog.speed = (PlayerRigid.velocity.x / maxSpeed) * 12;
-        Human.speed = (PlayerRigid.velocity.x / maxSpeed) * 13;
+        //Changes the animation speed of the monster and human based on how fast the rigidboy is moving
+        Frog.speed = (PlayerRigid.velocity.x / maxSpeed) * 70;
+        Human.speed = (PlayerRigid.velocity.x / maxSpeed) * 70;
+        //If the rigid body is moving below a certain speed it freezes the rigid body
         if (PlayerRigid.velocity.magnitude < 0.5f && !testMovement)
         {
             gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
