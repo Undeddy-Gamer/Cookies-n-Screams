@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    //Refrences to the buttons
     [Header("Upgrade Buttons")]
     public GameObject[] perSecondUpgrade;
     public GameObject[] clickValueUpgrade;
 
-
+    //Prices to upgrade clicks and persecond values
     [Header("Upgrade Prices")]
     public int[] perSecondPrices;
     public int[] clickValuePrices;
 
+    //How much each upgrade adds when they are bought
     [Header("Upgrade Amounts")]
     public int[] perSecondIncrease;
     public int[] clickValueIncrease;

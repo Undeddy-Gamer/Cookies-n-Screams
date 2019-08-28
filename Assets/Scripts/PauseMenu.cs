@@ -5,38 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool isPaused = false;
-    public GameObject pauseMenu;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePause();
-        }
-    }
-    public void TogglePause()
-    {
-        if (isPaused)
-        {
-            Time.timeScale = 1;
-            pauseMenu.SetActive(false);
-            isPaused = false;
-            return;
-        }
-        else
-        {
-            Time.timeScale = 0;
-            pauseMenu.SetActive(true);
-            isPaused = true;
-            return;
-        }
-    }
+    //Runs on a button click and takes an int input
     public void ChangeScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex); //Loads a secne from the number given
     }
-
+    //Stops the unity editor and if in normal play exits the appication 
     public void ExitGame()
     {
 #if UNITY_EDITOR
