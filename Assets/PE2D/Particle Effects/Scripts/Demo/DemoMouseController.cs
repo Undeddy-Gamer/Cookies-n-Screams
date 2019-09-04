@@ -10,13 +10,14 @@ public class DemoMouseController : MonoBehaviour
 
 	public float speedOffset = .01f;
 	public float lengthMultiplier = 40f;
-	public int numToSpawn = 200;
+    public int numToSpawn = 200;
+    public GameObject player;
 	public WrapAroundType wrapAround;
 
 	void Update ()
 	{
 		if (Input.GetMouseButtonUp (0)) {
-			SpawnExplosion (Camera.main.ScreenToWorldPoint (Input.mousePosition));
+			SpawnExplosion (player.gameObject.transform.position);
 		} 
 
 	}
