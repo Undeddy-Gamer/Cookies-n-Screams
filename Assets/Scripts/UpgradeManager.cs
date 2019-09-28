@@ -22,6 +22,7 @@ public class UpgradeManager : MonoBehaviour
 
     private void Update()
     {
+        //For every per second upgrade that can be bought go and check to see if the score is greater than the cost of the upgrade
         for (int i = 0; i < perSecondUpgrade.Length; i++)
         {
             if (ScoreManager.score >= perSecondPrices[i])
@@ -34,7 +35,7 @@ public class UpgradeManager : MonoBehaviour
             }
 
         }
-
+        //For every click value upgrade that can be bought go and check to see if the score is greater than the cost of the upgrade
         for (int i = 0; i < clickValueUpgrade.Length; i++)
         {
             if (ScoreManager.score >= clickValuePrices[i])
@@ -49,18 +50,27 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    //Run on click value upgrade bought
     public void ClickValueUpgrade(int indexRef)
     {
+        //Minus the cost from the score
         ScoreManager.score -= clickValuePrices[indexRef];
+        //Increases the click value
         Click.clickValue += clickValueIncrease[indexRef];
+        //Increases the price of the click value
         clickValuePrices[indexRef] += clickValuePrices[indexRef];
+        //Updates the desplayed score
         ScoreManager.Increase();
     }
 
+    //Run on per second score upgrade bought
     public void PerSecondUpgrade(int indexRef)
     {
+        //Minus the cost from the score
         ScoreManager.score -= perSecondPrices[indexRef];
+        //Increases the per second value
         Click.perSecondValue += perSecondIncrease[indexRef];
+        //Increases the price of the per second value
         perSecondPrices[indexRef] += perSecondPrices[indexRef];
         ScoreManager.Increase();
     }

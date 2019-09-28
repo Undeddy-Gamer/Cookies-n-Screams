@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     //Runs on a button click and takes an int input
     public void ChangeScene(int sceneIndex)

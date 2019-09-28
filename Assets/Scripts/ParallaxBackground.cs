@@ -37,12 +37,6 @@ public class ParallaxBackground : MonoBehaviour
 
     private void Update()
     {
-        /*
-            if (Input.GetKeyDown(KeyCode.A))
-                ScrollLeft();
-            else if (Input.GetKeyDown(KeyCode.D))
-                ScrollRight();
-        */
         float deltaX = cameraTransform.position.x - lastCameraX;
         transform.position += Vector3.right * (deltaX * paralaxSpeed);
         
@@ -59,8 +53,6 @@ public class ParallaxBackground : MonoBehaviour
         {
             goRight();
         }
-
-        //transform.position = new Vector3(transform.position.x, transform.position.y, layerNo);
     }
 
 
