@@ -1058,7 +1058,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0617557, y: 0.04227853, z: -10.83}
+  m_LocalPosition: {x: 1.0627413, y: 0.04227853, z: -10.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1887539243}
@@ -4460,12 +4460,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb302fe510e22548b1dcf8870970092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigid: {fileID: 0}
+  playerRigid: {fileID: 1987026756}
   acceleration: 40
   maxSpeed: 500
   currentAutoClickForce: 10
-  frog: {fileID: 0}
-  human: {fileID: 0}
+  frog: {fileID: 2001691028}
+  human: {fileID: 173130704}
   screamSlider: {fileID: 1138058870}
 --- !u!1 &2001691026
 GameObject:
